@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>99 Game</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/game.js" defer></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="header">Welcome to the 99 Game!</h1>
+    <div id="lobby">
+        <h2>Create or Join a Lobby</h2>
+        <input id="pseudo" placeholder="Enter your name" />
+        <button id="setPseudo">Set Pseudo</button>
+        <button id="createLobby">Create Lobby</button>
+        <input id="joinKey" placeholder="Enter Lobby Key" />
+        <button id="joinLobby">Join Lobby</button>
+        
+    </div>
+
+    <div id="higherLowerGame" style="display: none;">
+        <div id="currentCards" class="cards-container"></div>
+        <button id="higher">Higher</button>
+        <button id="lower">Lower</button>
+        <p id="higherLowerMessage"></p>
+    </div>
+    
+    <div id="game" style="display: none;">
+        <h2>Game Lobby</h2>
+        <p id="lobbyInfo"></p>
+        <div id="playerList"></div>
+        <div id="gameActions" style="display: none;">
+            <p id="lastCardPlayed"></p>
+            <div id="hand"></div>  
+        </div>
+        <p id="waitingPlayer"></p>
+        
+        <button id="startGame">Start Game</button>
+        <button id="restartGame" style="display: none;">Restart Game</button>
+    </div>
+
+</body>
+</html>
