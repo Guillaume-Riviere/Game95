@@ -254,7 +254,6 @@ socket.on("gameStarted", (players) => {
     document.getElementById("startGame").style.display = "none";
     document.getElementById("playerList").style.display = "none";
     document.getElementById("header").style.display = "none";
-    screen.orientation.lock();
 
     const currentPlayer = players[socket.id];
     if (currentPlayer) {
